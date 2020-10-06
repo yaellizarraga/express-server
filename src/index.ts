@@ -1,6 +1,6 @@
 import express from 'express';
 
-const app = express();
+const app: express.Application = express();
 const port = 4000;
 
 type IMessage = {
@@ -11,7 +11,7 @@ const message: IMessage = {
   message: 'Hola mundo'
 };
 
-app.get('/hello_world', (req, res) => {
+app.get('/hello_world', (req: express.Request, res: express.Response) => {
   res.json(message);
 });
 
